@@ -25,9 +25,9 @@
             <mat-card-title>Super Duper Quiz</mat-card-title>
             <mat-card-subtitle>Results</mat-card-subtitle>
         </mat-card-header>
-        <img *ngIf="correctCount > 2; else try_again" mat-card-image src="assets/img/congratulations.jpg" alt="Photo of congratulations">
+        <img *ngIf="correctCount > 2; else try_again" mat-card-image [src]="CONGRATULATIONS" alt="Photo of congratulations">
         <ng-template #try_again>
-            <img mat-card-image src="assets/img/try-again.png" alt="Photo of congratulations">
+            <img mat-card-image [src]="TRY_AGAIN" alt="Photo of Try again">
         </ng-template>
         <mat-card-content>
             <h4>You got {{correctCount}} correct of {{questions['quiz-questions'].length}} questions.</h4>
